@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Налаштування поведінки в'юпорта -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson 24</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+			</header>
+			<main class="page">
+				<section class="home-work">
+					<div class="home-work__container">
+						<div class="home-work__item item-home home-work__item--1">
+							<h2 class="item-home__title">Function</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №1</h3>
+								<div class="task__text">
+									<p>Хто попаде перший в консоль Вася чи Коля?</p>
+									<p>
+										function showName() {
+											<br>
+										console.log('Вася');
+										<br>
+									}
+									<br>
+									setTimeout(showName, 0);
+									<br>
+									console.log('Коля');
+									</p>
+									<p>Коля попаде перший в консоль, функція showName() має затримку setTimeout</p>
+									<p>параметр затримки хоч і вказаний 0, але вона всерівно є</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №2</h3>
+								<div class="task__text">
+									<p>Чи вірно визвана функція?</p>
+									<p>
+										showMessage();
+										<br>
+										function showMessage() {
+											<br>
+											console.log('Message');
+											<br>
+										}
+									</p>
+									<p>Функція визвана вірно, функцію об'явлено за допомогою Function Declaration</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №3</h3>
+								<div class="task__text">
+									<p>Чи вірно визвана функція?</p>
+									<p>
+										showMessageTwo();
+										<br>
+										let showMessageTwo = function() {
+											<br>
+											console.log('Message two');
+											<br>
+										}
+									</p>
+									<p>Функція визвана не вірно, функція об'явлено за допомогою Function Expression</p>
+									<p>Її можна викликати лише після об'явлення</p>
+									<p>
+										Вірний виклик функції
+										<br>
+										showMessageTwo();
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №4</h3>
+								<div class="task__text">
+									<p>Як вирішити проблему?</p>
+									<p>
+										"use strict"
+										<br>
+										if (2 &gt; 1) {
+											<br>
+											function showMessage() {
+												<br>
+											console.log('Message');
+											<br>
+										}}
+										<br>
+										showMessage(); // Error: showMessage is not defined
+									</p>
+									<br>
+									<p>Рішення проблеми</p>
+									<p>
+										"use strict"
+										<br>
+										let showMessage;
+										<br>
+										if (2 > 1) {
+											<br>
+											showMessage = function() {
+												<br>
+											console.log('Message');
+											<br>
+										}}
+										<br>
+										showMessage();
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="home-work__item item-home home-work__item--2">
+							<h2 class="item-home__title">Array</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №1</h3>
+								<div class="task__text">
+									<p>Яке число (довжину) ми отримаємо?</p>
+									<p>
+										let arr =['Ваня', 'Іштван','Оля',];
+										<br>
+										let newArr = arr;
+										<br>
+										newArr.push('Петро');
+										<br>
+										console.log(arr.length);
+									</p>
+									<p>В результаті довжина масиву arr буде 4</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №2</h3>
+								<div class="task__text">
+									<p>1) Створіть масив users з елементами 'Ваня' та 'Іштван'.
+										<br>
+										let users = ['Ваня', 'Іштван',]; 
+										<br>
+										console.log(users);
+									</p>
+									<p>
+										2) Добавте 'Оля' в кінець.
+										<br>
+										users.push('Оля');
+										<br>
+										console.log(users);
+									</p>
+									<p>
+										3) Замініть значення 'Іштван' на 'Петро'.
+										<br>
+										users[1] = 'Петро';
+										<br>
+										console.log(users);
+									</p>
+									<p>
+										4) Ваш код для пошуку значення має працювати для 
+										масивів з будь-якою довжиною.
+										<br>
+										console.log(users.includes('Петро'));
+									</p>
+									<p>
+										5) Удаліть перший елемент масиву і покажіть його.
+										<br>
+										let firstElement = users.splice(0, 1);
+										<br>
+										console.log(firstElement);
+										<br>
+										console.log(users);
+									</p>
+									<p>
+										6) Вставте 'Маша' і 'Паша' в початок масиву.
+										<br>
+										users.unshift('Маша', 'Паша');
+										<br>
+										console.log(users);
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №3</h3>
+								<div class="task__text">
+									<p>Видаліть елемент 'Іштван' і поверніть його в змінну</p>
+									<p>let arr = ['Ваня', 'Іштван', 'Оля',];</p>
+									<p>let element = arr.splice(1, 1);</p>
+									<p>console.log(element);</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №4</h3>
+								<div class="task__text">
+									<p>Зробіть з рядка масив</p>
+									<p>let str = 'Ваня,Іштван,Оля';</p>
+									<p>let array = str.split(',');</p>
+									<p>console.log(array);</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №5</h3>
+								<div class="task__text">
+									<p>Чому рівен previousValue в початку методу?</p>
+									<p>
+										let arr = [9, 2, 8,];
+										<br>
+										let reduceValue = arrTwo.reduce(function (previousValue, item, index, array) {
+										<br>
+										console.log(previousValue);
+										<br>
+										}); 
+										<br>
+										Консоль видасть помилку змінна arrTwo не об'явлена
+									</p>
+									<p>
+										let arr = [9, 2, 8,];
+										<br>
+										let reduceValue = arr.reduce(function (previousValue, item, index, array) {
+										<br>
+										console.log(previousValue);
+										<br>
+										}); 
+										<br>
+										Вірний запис, previousValue буде рівен 9, так як другий аргумент не вказаний
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="home-work__item item-home home-work__item--3">
+							<h2 class="item-home__title">DOM</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №1</h3>
+								<div class="task__text">
+									<p>
+										Отримати в змінну елемент з атрибутом data-say-hi та отримати значення цього атрибуту 
+										<br>
+										<div data-say-hi="yes">Привіт!</div>
+									</p>
+									<p>let sayHi = document.querySelector('[data-say-hi]');</p>
+									<p>console.log(sayHi.dataset.sayHi);</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №2</h3>
+								<div class="task__text">
+									<p>
+										Отримати в змінну елемент з текстом Йончі
+										<br>
+										<ul>
+											<li>Корчі</li>
+											<li>Йончі</li>
+										</ul>
+									</p>
+									<p>
+										let list = document.querySelector('ul');
+										<br>
+										let listItem = list.lastElementChild;
+										<br>
+										console.log(list);
+										<br>
+										console.log(listItem);
+										<br>
+										console.log(listItem.textContent);
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №3</h3>
+								<div class="task__text">
+									<p>
+										Добавити в змінну колекцію елементів з класом like
+										<br>
+										<div class="like"></div>
+										<div class="subscribe"></div>
+										<div class="like subscribe"></div>
+									</p>
+									<p>
+										let likeItems = document.querySelectorAll('.like');
+										<br>
+										console.log(likeItems);
+									</p>
+								</div>
+							</div>
+							<div class="item-home__task task">
+								<h3 class="task__title">Задача №4</h3>
+								<div class="task__text">
+									<p>
+										Куди добавиться &lt;li&gt;Текст&lt;/li&gt; ?
+										<ol>
+											<li>Пункт №1</li>
+											<li>Пункт №2</li>
+										</ol>
+										<br>
+										const list = document.querySelectorAll('ol');
+										<br>
+										list.insertAdjacentHTML(
+										<br>
+										'beforeend',
+										<br>
+										'&lt;li&gt;Текст&lt;/li&gt;'
+										<br>
+										);
+										<br>
+										Буде помилка в консолі, метод document.querySelectorAll не спрацює
+										<br>
+										для вирішення задачі потрібно використовувати метод document.querySelector
+									</p>
+									<br>
+									<p>
+										const list = document.querySelector('ol');
+										<br>
+										list.insertAdjacentHTML(
+										<br>
+										'beforeend',
+										<br>
+										'&lt;li&gt;Текст&lt;/li&gt;'
+										<br>
+										);
+										<br>
+										&lt;li&gt;Текст&lt;/li&gt; добавиться останнім елементом в list
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="home-work__item item-home">
+							<h2 class="item-home__title">Scroll, size, coordinates</h2>
+							<div class="item-home__task task">
+								<h3 class="task__title">Все у файлі JS</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+			</footer>
+		</div>
+		<div class="block"></div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
