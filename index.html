@@ -232,10 +232,10 @@
 							<div class="item-home__task task">
 								<h3 class="task__title">Задача №1</h3>
 								<div class="task__text">
-									<p>
+									<div>
 										<p>Отримати в змінну елемент з атрибутом data-say-hi та отримати значення цього атрибуту </p>
 										<div data-say-hi="yes">Привіт!</div>
-									</p>
+									</div>
 									<p>let sayHi = document.querySelector('[data-say-hi]');</p>
 									<p>console.log(sayHi.dataset.sayHi);</p>
 								</div>
@@ -243,32 +243,32 @@
 							<div class="item-home__task task">
 								<h3 class="task__title">Задача №2</h3>
 								<div class="task__text">
-									<p>
+									<div>
 										<p>Отримати в змінну елемент з текстом Йончі</p>
 										<ul>
 											<li>Корчі</li>
 											<li>Йончі</li>
 										</ul>
-									</p>
-									<p>
+									</div>
+									<div>
 										<p>let list = document.querySelector('ul');</p>
 										<p>let listItem = list.lastElementChild;</p>
 										<p>console.log(list);</p>
 										<p>console.log(listItem);</p>
 										<p>console.log(listItem.textContent);</p>
-									</p>
+									</div>
 								</div>
 							</div>
 							<div class="item-home__task task">
 								<h3 class="task__title">Задача №3</h3>
 								<div class="task__text">
-									<p>
+									<div>
 										Добавити в змінну колекцію елементів з класом like
 										<br>
 										<div class="like"></div>
 										<div class="subscribe"></div>
 										<div class="like subscribe"></div>
-									</p>
+									</div>
 									<p>let likeItems = document.querySelectorAll('.like');
 										<br>
 										console.log(likeItems);</p>
@@ -277,7 +277,7 @@
 							<div class="item-home__task task">
 								<h3 class="task__title">Задача №4</h3>
 								<div class="task__text">
-									<p>
+									<div>
 										<p>Куди добавиться &lt;li&gt;Текст&lt;/li&gt; ?</p>
 										<ol>
 											<li>Пункт №1</li>
@@ -290,7 +290,7 @@
 										<p>);</p>
 										<p>Буде помилка в консолі, метод document.querySelectorAll не спрацює</p>
 										<p>для вирішення задачі потрібно використовувати метод document.querySelector</p>
-									</p>
+									</div>
 									<br>
 									<p>const list = document.querySelector('ol');
 										<br>
