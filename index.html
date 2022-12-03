@@ -232,9 +232,10 @@
 							<div class="item-home__task task">
 								<h3 class="task__title">Задача №1</h3>
 								<div class="task__text">
-									<p>Отримати в змінну елемент з атрибутом data-say-hi та отримати значення цього атрибуту 
-										<br>
-										<div data-say-hi="yes">Привіт!</div></p>
+									<p>
+										<p>Отримати в змінну елемент з атрибутом data-say-hi та отримати значення цього атрибуту </p>
+										<div data-say-hi="yes">Привіт!</div>
+									</p>
 									<p>let sayHi = document.querySelector('[data-say-hi]');</p>
 									<p>console.log(sayHi.dataset.sayHi);</p>
 								</div>
@@ -243,22 +244,19 @@
 								<h3 class="task__title">Задача №2</h3>
 								<div class="task__text">
 									<p>
-										Отримати в змінну елемент з текстом Йончі
-										<br>
+										<p>Отримати в змінну елемент з текстом Йончі</p>
 										<ul>
 											<li>Корчі</li>
 											<li>Йончі</li>
 										</ul>
 									</p>
-									<p>let list = document.querySelector('ul');
-										<br>
-										let listItem = list.lastElementChild;
-										<br>
-										console.log(list);
-										<br>
-										console.log(listItem);
-										<br>
-										console.log(listItem.textContent);</p>
+									<p>
+										<p>let list = document.querySelector('ul');</p>
+										<p>let listItem = list.lastElementChild;</p>
+										<p>console.log(list);</p>
+										<p>console.log(listItem);</p>
+										<p>console.log(listItem.textContent);</p>
+									</p>
 								</div>
 							</div>
 							<div class="item-home__task task">
@@ -280,25 +278,18 @@
 								<h3 class="task__title">Задача №4</h3>
 								<div class="task__text">
 									<p>
-										Куди добавиться &lt;li&gt;Текст&lt;/li&gt; ?
+										<p>Куди добавиться &lt;li&gt;Текст&lt;/li&gt; ?</p>
 										<ol>
 											<li>Пункт №1</li>
 											<li>Пункт №2</li>
 										</ol>
-										<br>
-										const list = document.querySelectorAll('ol');
-										<br>
-										list.insertAdjacentHTML(
-										<br>
-										'beforeend',
-										<br>
+										<p>const list = document.querySelectorAll('ol');</p>
+										<p>list.insertAdjacentHTML(</p>
+										<p>'beforeend',</p>
 										'&lt;li&gt;Текст&lt;/li&gt;'
-										<br>
-										);
-										<br>
-										Буде помилка в консолі, метод document.querySelectorAll не спрацює
-										<br>
-										для вирішення задачі потрібно використовувати метод document.querySelector
+										<p>);</p>
+										<p>Буде помилка в консолі, метод document.querySelectorAll не спрацює</p>
+										<p>для вирішення задачі потрібно використовувати метод document.querySelector</p>
 									</p>
 									<br>
 									<p>const list = document.querySelector('ol');
