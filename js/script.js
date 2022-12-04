@@ -195,7 +195,7 @@ list.insertAdjacentHTML(
 //Taske 1_____________________________________
 //Дізнатись ширину полоси прокрутки
 const mainDocument = document.documentElement;
-const mainDocumentWidth = mainDocument.scrollWidth;
+const mainDocumentWidth = mainDocument.clientWidth;
 console.log(mainDocumentWidth);
 
 //Taske 2_____________________________________
