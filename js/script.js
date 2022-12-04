@@ -83,33 +83,55 @@ console.log(arr.length);
 
 //Taske 2_____________________________________
 /*
-1 Створіть масив users з елементами 'Ваня' та 'Іштван'.
-2 Добавте 'Оля' в кінець.
-3 Замініть значення 'Іштван' на 'Петро'.
-4 Ваш код для пошуку значення має працювати для 
+1) Створіть масив users з елементами 'Ваня' та 'Іштван'.
+2) Добавте 'Оля' в кінець.
+3) Замініть значення 'Іштван' на 'Петро'.
+4) Ваш код для пошуку значення має працювати для 
   масивів з будь-якою довжиною.
-5 Удаліть перший елемент масиву і покажіть його.
-6 Вставте 'Маша' і 'Паша' в початок масиву.
+5) Удаліть перший елемент масиву і покажіть його.
+6) Вставте 'Маша' і 'Паша' в початок масиву.
 */
-/*
-let users = ['Ваня', 'Іштван',]; // 1
+// 1
+let users = ['Ваня', 'Іштван',]; 
 console.log(users);
 
-users.push('Оля'); // 2
+// 2
+users.push('Оля'); 
 console.log(users);
 
-users[1] = 'Петро'; // 3
+// 3
+users[1] = 'Петро'; 
 console.log(users);
 
-console.log(users.includes('Петро')); // 4
+// 4
+console.log(users.includes('Петро')); 
+let user;
+for (let i = 0; i < users.length; ++i) {
+	user = users[i];
+	if (user === 'Оля') {
+		console.log(users[i]);
+	} else {
+		console.log('User not found');
+	}
+};
 
-let firstElement = users.splice(0, 1); // 5
+users.forEach(user => {
+	if (user === 'Ваня') {
+		console.log(user);
+	} else {
+		console.log('User not found');
+	}
+});
+
+// 5
+let firstElement = users.splice(0, 1); 
 console.log(firstElement);
 console.log(users);
 
-users.unshift('Маша', 'Паша'); // 6
+// 6
+users.unshift('Маша', 'Паша'); 
 console.log(users);
-*/
+
 //Taske 3_____________________________________
 /*
 //Видаліть елемент 'Іштван' і поверніть його в змінну
@@ -211,6 +233,7 @@ function setScrollTo() {
 setTimeout(setScrollTo, 1000);
 
 //Taske 3_____________________________________
+
 //Отримайте координати будь-яких трьох елементів на сторінці
 const itemFirst = document.querySelector('.home-work__item--1');
 const itemSecond = document.querySelector('.home-work__item--2');

@@ -169,7 +169,41 @@
 										4) Ваш код для пошуку значення має працювати для 
 										масивів з будь-якою довжиною.
 										<br>
+										Не впевнений чи вірно зрозумив завдання, вирішив декількома методами
+										<br>
+										<br>
 										console.log(users.includes('Петро'));
+										<br>
+										<br>
+										let user;
+										<br>
+										for (let i = 0; i &lt; users.length; ++i) {
+										<br>
+										user = users[i];
+										<br>
+										if (user === 'Оля') {
+										<br>
+										console.log(users[i]);
+										<br>
+										} else {
+										<br>
+										console.log('User not found');
+										<br>
+										}};
+										<br>
+										<br>
+										<br>
+										users.forEach(user => {
+										<br>
+										if (user === 'Ваня') {
+										<br>
+										console.log(user);
+										<br>
+										} else {
+										<br>
+										console.log('User not found');
+										<br>
+										}});
 									</p>
 									<br>
 									<p>
