@@ -23,6 +23,7 @@
 								<h3 class="task__title">Задача №1</h3>
 								<div class="task__text">
 									<p>Хто попаде перший в консоль Вася чи Коля?</p>
+									<br>
 									<p>
 										function showName() {
 											<br>
@@ -34,14 +35,15 @@
 									<br>
 									console.log('Коля');
 									</p>
-									<p>Коля попаде перший в консоль, функція showName() має затримку setTimeout</p>
-									<p>параметр затримки хоч і вказаний 0, але вона всерівно є</p>
+									<br>
+									<p>Коля попаде перший в консоль, функція showName() має затримку setTimeout параметр затримки хоч і вказаний 0, але вона всерівно є</p>
 								</div>
 							</div>
 							<div class="item-home__task task">
 								<h3 class="task__title">Задача №2</h3>
 								<div class="task__text">
 									<p>Чи вірно визвана функція?</p>
+									<br>
 									<p>
 										showMessage();
 										<br>
@@ -51,6 +53,7 @@
 											<br>
 										}
 									</p>
+									<br>
 									<p>Функція визвана вірно, функцію об'явлено за допомогою Function Declaration</p>
 								</div>
 							</div>
@@ -58,6 +61,7 @@
 								<h3 class="task__title">Задача №3</h3>
 								<div class="task__text">
 									<p>Чи вірно визвана функція?</p>
+									<br>
 									<p>
 										showMessageTwo();
 										<br>
@@ -67,8 +71,8 @@
 											<br>
 										}
 									</p>
-									<p>Функція визвана не вірно, функція об'явлено за допомогою Function Expression</p>
-									<p>Її можна викликати лише після об'явлення</p>
+									<p>Функція визвана не вірно, функція об'явлено за допомогою Function Expression. Її можна викликати лише після об'явлення</p>
+									<br>
 									<p>
 										Вірний виклик функції
 										<br>
@@ -80,6 +84,7 @@
 								<h3 class="task__title">Задача №4</h3>
 								<div class="task__text">
 									<p>Як вирішити проблему?</p>
+									<br>
 									<p>
 										"use strict"
 										<br>
@@ -120,6 +125,7 @@
 								<h3 class="task__title">Задача №1</h3>
 								<div class="task__text">
 									<p>Яке число (довжину) ми отримаємо?</p>
+									<br>
 									<p>
 										let arr =['Ваня', 'Іштван','Оля',];
 										<br>
@@ -129,6 +135,7 @@
 										<br>
 										console.log(arr.length);
 									</p>
+									<br>
 									<p>В результаті довжина масиву arr буде 4</p>
 								</div>
 							</div>
@@ -141,6 +148,7 @@
 										<br>
 										console.log(users);
 									</p>
+									<br>
 									<p>
 										2) Добавте 'Оля' в кінець.
 										<br>
@@ -148,6 +156,7 @@
 										<br>
 										console.log(users);
 									</p>
+									<br>
 									<p>
 										3) Замініть значення 'Іштван' на 'Петро'.
 										<br>
@@ -155,12 +164,14 @@
 										<br>
 										console.log(users);
 									</p>
+									<br>
 									<p>
 										4) Ваш код для пошуку значення має працювати для 
 										масивів з будь-якою довжиною.
 										<br>
 										console.log(users.includes('Петро'));
 									</p>
+									<br>
 									<p>
 										5) Удаліть перший елемент масиву і покажіть його.
 										<br>
@@ -170,6 +181,7 @@
 										<br>
 										console.log(users);
 									</p>
+									<br>
 									<p>
 										6) Вставте 'Маша' і 'Паша' в початок масиву.
 										<br>
@@ -183,6 +195,7 @@
 								<h3 class="task__title">Задача №3</h3>
 								<div class="task__text">
 									<p>Видаліть елемент 'Іштван' і поверніть його в змінну</p>
+									<br>
 									<p>let arr = ['Ваня', 'Іштван', 'Оля',];</p>
 									<p>let element = arr.splice(1, 1);</p>
 									<p>console.log(element);</p>
@@ -192,6 +205,7 @@
 								<h3 class="task__title">Задача №4</h3>
 								<div class="task__text">
 									<p>Зробіть з рядка масив</p>
+									<br>
 									<p>let str = 'Ваня,Іштван,Оля';</p>
 									<p>let array = str.split(',');</p>
 									<p>console.log(array);</p>
@@ -201,6 +215,7 @@
 								<h3 class="task__title">Задача №5</h3>
 								<div class="task__text">
 									<p>Чому рівен previousValue в початку методу?</p>
+									<br>
 									<p>
 										let arr = [9, 2, 8,];
 										<br>
@@ -210,8 +225,9 @@
 										<br>
 										}); 
 										<br>
-										Консоль видасть помилку змінна arrTwo не об'явлена
+										Консоль видасть помилку, змінна arrTwo не об'явлена
 									</p>
+									<br>
 									<p>
 										let arr = [9, 2, 8,];
 										<br>
@@ -236,6 +252,7 @@
 										<p>Отримати в змінну елемент з атрибутом data-say-hi та отримати значення цього атрибуту </p>
 										<div data-say-hi="yes">Привіт!</div>
 									</div>
+									<br>
 									<p>let sayHi = document.querySelector('[data-say-hi]');</p>
 									<p>console.log(sayHi.dataset.sayHi);</p>
 								</div>
@@ -250,6 +267,7 @@
 											<li>Йончі</li>
 										</ul>
 									</div>
+									<br>
 									<div>
 										<p>let list = document.querySelector('ul');</p>
 										<p>let listItem = list.lastElementChild;</p>
@@ -265,6 +283,7 @@
 									<div>
 										Добавити в змінну колекцію елементів з класом like
 										<br>
+										<br>
 										<div class="like"></div>
 										<div class="subscribe"></div>
 										<div class="like subscribe"></div>
@@ -279,10 +298,12 @@
 								<div class="task__text">
 									<div>
 										<p>Куди добавиться &lt;li&gt;Текст&lt;/li&gt; ?</p>
+										<br>
 										<ol>
 											<li>Пункт №1</li>
 											<li>Пункт №2</li>
 										</ol>
+										<br>
 										<p>const list = document.querySelectorAll('ol');</p>
 										<p>list.insertAdjacentHTML(</p>
 										<p>'beforeend',</p>

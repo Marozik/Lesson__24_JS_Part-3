@@ -122,7 +122,7 @@ console.log(element);
 /*
 //Зробіть з рядка масив
 let str = 'Ваня,Іштван,Оля';
-let array = str.split(',');
+let array = str.split(",");
 console.log(array);
 */
 
@@ -199,11 +199,11 @@ const mainDocumentWidth = mainDocument.scrollWidth;
 console.log(mainDocumentWidth);
 
 //Taske 2_____________________________________
-//Заставте браузер прокрутитись на 100px зверху
+//Заставте браузер прокрутитись на 1000px зверху
 //через 1 секунду після відкриття сторінки
 function setScrollTo() {
 	window.scrollTo({
-		top: 100,
+		top: 1000,
 		left: 0,
 		behavior: "smooth"
 	});
@@ -218,12 +218,12 @@ const itemThird = document.querySelector('.home-work__item--3');
 
 const itemFirstLeftCoord = itemFirst.getBoundingClientRect().left;
 const itemFirstTopCoord = itemFirst.getBoundingClientRect().top;
-console.log(`Елемент 1 розташований за координатами left: ${itemFirstLeftCoord}, top: ${itemFirstTopCoord}`);
+console.log(`Елемент 1 розташований за координатами top: ${itemFirstTopCoord}, left: ${itemFirstLeftCoord}`);
 
 const itemSecondRightCoord = itemSecond.getBoundingClientRect().right;
 const itemSecondBottomCoord = itemSecond.getBoundingClientRect().bottom;
-console.log(`Елемент 2 розташований за координатами right: ${itemSecondRightCoord}, bottom: ${itemSecondBottomCoord}`);
+console.log(`Елемент 2 розташований за координатами bottom: ${itemSecondBottomCoord}, right: ${itemSecondRightCoord}`);
 
 const itemThirdLeftCoord = itemThird.getBoundingClientRect().left;
 const itemThirdTopCoord = itemThird.getBoundingClientRect().top;
-console.log(`Елемент 3 розташований за координатами left: ${itemThirdLeftCoord}, top: ${itemThirdTopCoord}`);
+console.log(`Елемент 3 розташований за координатами top: ${itemThirdTopCoord}, left: ${itemThirdLeftCoord}`);

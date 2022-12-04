@@ -47,12 +47,14 @@ body{
 	padding: 10px;
 	background-color: rgb(102, 191, 246);
 	border-radius: 10px;
+	font-size: 20px;
 }
 .item-home__task:not(:last-child) {
 	margin-bottom: 20px;
 }
 .task__title {
 	font-size: 24px;
+	font-weight: 700;
 }
 .task__title:not(:last-child) {
 	margin-bottom: 10px;
