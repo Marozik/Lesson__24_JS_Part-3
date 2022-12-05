@@ -1,410 +1,256 @@
 // Строгий режим
 "use strict"
 
-// Клонування елементу
-// cloneNode - клонує сам об'єкт
-// cloneNode(true) - клонує об'єкт з вмістом
-/*
-const block = document.querySelector('.block');
-const blockClone = block.cloneNode();
-console.log(blockClone);
-*/
 
-// Видалення об'єкту
-/*
-const block = document.querySelector('.block');
-block.remove();
-*/
+//==========================================================
+// Function ==========================================================
+//==========================================================
 
-// Стилі та класи
-// className classList
-
-// className - перезапис класу
+//Taske 1_____________________________________
+//Хто попаде перший в консоль Вася чи Коля?
 /*
-const block = document.querySelector('.block');
-block.className = "object";
-*/
-
-// classList - метод роботи з класами
-// const block = document.querySelector('.block');
-/*
-// НЕ використовуємо крапку для імені класу
-block.classList.add('classname'); - додаємо клас
-block.classList.remove('classname'); - видаляємо клас
-block.classList.toggle('classname'); - якщо клас є видаляємо якщо немає додаємо
-block.classList.contains('classname'); - поверне true якщо клас є
-*/
-
-//block.classList.add('active');
-/*
-if (block.classList.contains('active')) {
-	// code
-	console.log('Клас є');
+function showName() {
+	console.log('Вася');
 }
-if (!block.classList.contains('active')) {
-	// code
-	console.log('Класа немає');
+setTimeout(showName, 0);
+console.log('Коля');
+//Коля попаде перший в консоль, функція showName() має затримку setTimeout
+//параметр затримки хоч і вказаний 0, але вона всерівно є
+*/
+
+//Taske 2_____________________________________
+//Чи вірно визвана функція?
+/*
+showMessage();
+function showMessage() {
+	console.log('Message');
 }
+//Функція визвана вірно, функцію об'явлено за допомогою Function Declaration
 */
 
-// Управління стилями
-// style
-// const block = document.querySelector('.block');
+//Taske 3_____________________________________
+//Чи вірно визвана функція?
 /*
-const totalPadding = 20 + 30;
-
-// Додати властивість
-block.style.paddingTop = `${totalPadding}px`;
-block.style.paddingBottom = `${totalPadding}px`;
-
-// Прибрати властивість
-block.style.paddingTop = ``;
-*/
-/*
-// Перезапис стілів на вказані
-block.style.cssText = `
-	background-color: #000;
-	padding: 10px 30px 10px 80px;
-	border: 1px solid #000;
-	color: #fff;
-`;
-// .... code ...
-// Змінюємо одину властивість
-block.style.color = `#000`;
+showMessageTwo();
+let showMessageTwo = function() {
+	console.log('Message two');
+}
+//Функція визвана не вірно, функція об'явлено за допомогою Function Expression
+//Її можна викликати лише після об'явлення
 */
 
-// Отримання стилю (його значення)
-// getComputedStyle
+//Вірний виклик функції
+//showMessageTwo();
+
+//Taske 4_____________________________________
+//Як вирішити проблему?
 /*
-const block = document.querySelector('.block');
-
-const blockStyle = getComputedStyle(block);
-const paddingTop = parseInt(blockStyle.paddingTop);
-const fontSize = parseInt(blockStyle.fontSize);
-console.log(paddingTop);
-console.log(fontSize);
-*/
-/*
-// Робота з атрибутами
-const block = document.querySelector('.block');
-//Перевіряємо наявність атрибута.
-block.hasAttribute('name');
-//Получаємо значення атрибута.
-block.getAttribute('name');
-//Установлюємо значення атрибута.
-block.setAttribute('name', 'value');
-//Удаляємо атрибут.
-block.removeAttribute('name');
-*/
-/*
-// DATA атирибути
-// Завжди буде повертатись рядок
-// Унарний оператор + переведе рядок в число
-const speed = +block.dataset.animationSpeed;
-console.log(speed);
-
-// Створили атрибут
-block.dataset.someAttr = "Text";
-
-// ....
-
-// Отримали данні
-const save = block.dataset.someAttr;
-console.log(save);
-
-// Перевірка чи є атрибут
-console.log(block.hasAttribute('data-some-attr'));
+"use strict"
+if (2 > 1) {
+	function showMessage() {
+	console.log('Message');
+}
+}
+showMessage(); // Error: showMessage is not defined
 */
 
+//Рішення проблеми
 /*
-// Корисні властивості
-const block = document.querySelector('.block');
-
-// Отримання імені тегу
-console.log(block.tagName);
-
-// Атрибут hidden
-block.hidden = true;
+"use strict"
+let showMessage;
+if (2 > 1) {
+	showMessage = function() {
+	console.log('Message');
+}
+}
+showMessage();
 */
 
 
-// Розміри та кординати
+//==========================================================
+// Array ==========================================================
+//==========================================================
 
-
-// Розміри вікна браузера (з полосами прокрутки)
-// об'єкт window
+//Taske 1_____________________________________
+//Яке число (довжину) ми отримаємо?
 /*
-const windowWidth = window.innerWidth;
-const windowHeight = window.innerHeight;
-console.log(windowWidth);
-console.log(windowHeight);
+let arr =['Ваня', 'Іштван','Оля',];
+let newArr = arr;
+newArr.push('Петро');
+console.log(arr.length);
+*/
+//В результаті довжина масиву arr буде 4
+
+//Taske 2_____________________________________
+/*
+1) Створіть масив users з елементами 'Ваня' та 'Іштван'.
+2) Добавте 'Оля' в кінець.
+3) Замініть значення 'Іштван' на 'Петро'.
+4) Ваш код для пошуку значення має працювати для 
+  масивів з будь-якою довжиною.
+5) Удаліть перший елемент масиву і покажіть його.
+6) Вставте 'Маша' і 'Паша' в початок масиву.
+*/
+// 1
+let users = ['Ваня', 'Іштван',]; 
+console.log(users);
+
+// 2
+users.push('Оля'); 
+console.log(users);
+
+// 3
+users[1] = 'Петро'; 
+console.log(users);
+
+// 4
+
+console.log(users.includes('Петро')); 
+
+function findUser(item) {
+	users.forEach(user => {
+		if (user === item) {
+			console.log(user);
+		} else {
+			console.log('User not found');
+		}
+	});
+	
+	for (let i = 0; i < users.length; ++i) {
+		let user = users[i];
+		if (user === item) {
+			console.log(users[i]);
+		} else {
+			console.log('User not found');
+		}
+	};
+};
+findUser(`Оля`);
+
+// 5
+let firstElement = users.splice(0, 1); 
+console.log(firstElement);
+console.log(users);
+
+// 6
+users.unshift('Маша', 'Паша'); 
+console.log(users);
+
+//Taske 3_____________________________________
+/*
+//Видаліть елемент 'Іштван' і поверніть його в змінну
+let arr = ['Ваня', 'Іштван', 'Оля',];
+let element = arr.splice(1, 1);
+console.log(element);
 */
 
-// Розміри вікна браузера (з полосами прокрутки)
-// об'єкт body
-// clientWidth clientHeight
+//Taske 4_____________________________________
 /*
-const mainElement = document.documentElement;
-const windowClientWidth = mainElement.clientWidth;
-const windowClientHeight = mainElement.clientHeight;
-console.log(windowClientWidth);
-console.log(windowClientHeight);
+//Зробіть з рядка масив
+let str = 'Ваня,Іштван,Оля';
+let array = str.split(",");
+console.log(array);
 */
 
-// Кількість прокручений пікселів
-// об'єкт window
+//Taske 5_____________________________________
+//Чому рівен previousValue в початку методу?
 /*
-const windowScrollTop = window.scrollY;
-const windowScrollLeft = window.scrollX;
-console.log(windowScrollTop);
-console.log(windowScrollLeft);
+let arr = [9, 2, 8,];
+let reduceValue = arrTwo.reduce(function (previousValue, item, index, array) {
+	console.log(previousValue);
+}); 
+//Консоль видасть помилку змінна arrTwo не об'явлена
+*/
+/*
+let arr = [9, 2, 8,];
+let reduceValue = arr.reduce(function (previousValue, item, index, array) {
+	console.log(previousValue);
+}); 
+//Вірний запис, previousValue буде рівен 9, так як другий аргумент не вказаний
 */
 
-// window.scrollBy (left, top)
-// прокрутка відносно поточного положення
+
+//==========================================================
+// DOM ==========================================================
+//==========================================================
+
+//Taske 1_____________________________________
+//Отримати в змінну елемент з атрибутом data-say-hi
+//отримати значення цього атрибуту 
+//let sayHi = document.querySelector('[data-say-hi]');
+//console.log(sayHi.dataset.sayHi);
+
+//Taske 2_____________________________________
+//Отримати в змінну елемент з текстом Йончі
+//let list = document.querySelector('ul');
+//let listItem = list.lastElementChild;
+//console.log(list);
+//console.log(listItem);
+//console.log(listItem.textContent);
+
+
+
+//Taske 3_____________________________________
+//Добавити в змінну колекцію елементів з класом like	
+//let likeItems = document.querySelectorAll('.like');
+//console.log(likeItems);
+
+//Taske 4_____________________________________
+//Куди добавиться <li>Текст</li> ?
 /*
-window.scrollBy(0, 50);
-console.log(window.scrollY);
+const list = document.querySelectorAll('ol');
+list.insertAdjacentHTML(
+	'beforeend',
+	'<li>Текст</li>'
+);
+//Буде помилка в консолі, метод document.querySelectorAll не спрацює
+//для вирішення задачі потрібно використовувати метод document.querySelector
 */
+//const list = document.querySelector('ol');
+//list.insertAdjacentHTML(
+// 'beforeend',
+// '<li>Текст</li>'
+//);
+//<li>Текст</li> добавиться останнім елементом в list
 
 
-// window.scrollTo({ options }) прокрутка на вказані кординати
-/*
-window.scrollTo({
-	top: 500,
-	let: 0,
-	behavior: "smooth"
-});
-*/
+//==========================================================
+// Scroll, Size, Coordinates ===================================
+//==========================================================
 
-// elem.scrollIntoView();
-// Проктурка до об'єкту
-/*
-const block = document.querySelector('.block');
+//Taske 1_____________________________________
+//Дізнатись ширину полоси прокрутки
+const mainDocument = document.documentElement;
+const mainDocumentWidth = mainDocument.clientWidth;
+console.log(mainDocumentWidth);
 
-function scrollToBlock() {
-	block.scrollIntoView({
-		//"start", "center", "end". За замовчуванням "center".
-		block: "center",
-		//"start", "center", "end" чи "nearest". За замовчуванням "nearest".
-		inline: "nearest",
+//Taske 2_____________________________________
+//Заставте браузер прокрутитись на 1000px зверху
+//через 1 секунду після відкриття сторінки
+function setScrollTo() {
+	window.scrollTo({
+		top: 1000,
+		left: 0,
 		behavior: "smooth"
 	});
-}*/
-
-
-// Позиція об'єкта
-// offsetLeft та offsetTop
-// offsetParent - батьківський об'єкт
-// (позиція CSS-свойства absolute, relative, fixed чи sticky)
-// відносно якого рахується кординати
-/*
-const block = document.querySelector('.block');
-
-console.log(block.offsetParent);
-
-console.log(block.offsetTop);
-console.log(block.offsetLeft);
-*/
-
-// Загальні розміри елемента
-// offsetWidth и offsetHeight
-/*
-const block = document.querySelector('.block');
-console.log(block.offsetWidth);
-console.log(block.offsetHeight);
-*/
-
-// Кординати відносно вікна браузера
-// getBoundingClientRect
-/*
-const block = document.querySelector('.block');
-console.log(block.getBoundingClientRect().top);
-console.log(block.getBoundingClientRect().left);
-*/
-
-// Отримання об'екта по кординатам
-// document.elementFromPoint(x, y);
-/*
-const elem = document.elementFromPoint(50, 0);
-console.log(elem);
-*/
-
-/*
-// Intersection Observer API
-https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-*/
-
-
-// Події
-// Синтаксис події
-
-// const link = document.querySelector('.link');
-// elem/document.addEventListener("ім'я події", func, options)
-// elem/document.addEventListener("ім'я події", ()=>{ code }, options);
-
-// Відмінити подію
-// removeEventListener
-
-/*
-link.addEventListener("click", (event) => {
-	console.log('123');
-});
-link.removeEventListener("click", (event) => {
-	console.log('123');
-});
-*/
-/*
-const options = {
-	"capture": false, // фаза, на якій повинен спрацювати обробник
-	"once": true, // якщо істина, тоді обробник буде
-	//автоматично удалён після виконання.
-	"passive": false // якщо true, то вказує, що обробник
-	//ніколи не викликає preventDefault()
 }
+setTimeout(setScrollTo, 1000);
 
-link.addEventListener("click", linkAction);
-function linkAction(event) {
-	console.log('123');
-}
-*/
+//Taske 3_____________________________________
 
-/*
-const link = document.querySelector('.link');
+//Отримайте координати будь-яких трьох елементів на сторінці
+const itemFirst = document.querySelector('.home-work__item--1');
+const itemSecond = document.querySelector('.home-work__item--2');
+const itemThird = document.querySelector('.home-work__item--3');
 
-// Дія за замовченням
-link.addEventListener("click", linkAction);
-function linkAction(event) {
-	if (link.dataset.google === "false") {
-		console.log('123');
-		// Відключення дії за замовченням!
-		event.preventDefault();
-	}
-}
-*/
+const itemFirstLeftCoord = itemFirst.getBoundingClientRect().left;
+const itemFirstTopCoord = itemFirst.getBoundingClientRect().top;
+console.log(`Елемент 1 розташований за координатами top: ${itemFirstTopCoord}, left: ${itemFirstLeftCoord}`);
 
-// Події для багатьох елементів
-/*
-const links = document.querySelectorAll('.link');
-links.forEach(link => {
-	link.addEventListener("click", linkAction);
-	function linkAction(event) {
-		if (link.dataset.google === "false") {
-			console.log('123');
-			// Відключення дії за замовченням!
-			event.preventDefault();
-		}
-	}
-});
-*/
-// Делегування події
-/*
-document.addEventListener("click", action);
+const itemSecondRightCoord = itemSecond.getBoundingClientRect().right;
+const itemSecondBottomCoord = itemSecond.getBoundingClientRect().bottom;
+console.log(`Елемент 2 розташований за координатами bottom: ${itemSecondBottomCoord}, right: ${itemSecondRightCoord}`);
 
-function action(event) {
-	const targetItem = event.target;
-	if (targetItem.closest('.link')) {
-		// Потрібний код
-		console.log('It`s LINK!');
-		event.preventDefault();
-	}
-
-	if (targetItem.closest('.button')) {
-		// Потрібний код
-	}
-
-	if (targetItem.closest('.some-element')) {
-		// Потрібний код
-	}
-
-
-	console.log('Click');
-}
-*/
-
-// Тип події
-//console.log(event.type);
-// Об'єкт на якому створив обробник
-//console.log(event.target);
-// Положення курсора по осі X відносно вікна
-//console.log(event.clientX);
-// Положення курсора по осі Y відносно вікна
-//console.log(event.clientY);
-
-// Положення курсора по осі X відносно документу
-//console.log(event.pageX);
-// Положення курсора по осі Y відносно документу
-//console.log(event.pageY);
-
-// Усі деталі події
-//console.log(event);
-
-// Основні події миші
-/*
-click, mouseenter, mouseleave
-*/
-
-// mouseenter - наведення миші
-// mouseleave - переведення миші
-// mousemove - рух миші
-
-/*
-const mouseBlock = document.querySelector('.mouse');
-
-mouseBlock.addEventListener("mouseenter", mouseAction);
-mouseBlock.addEventListener("mouseleave", mouseAction);
-mouseBlock.addEventListener("mousemove", mouseAction);
-
-const ball = document.querySelector('.mouse__ball');
-
-function mouseAction(event) {
-	if (event.type === "mouseenter") {
-		// При наведенні
-		console.log(event.pageY);
-	}
-	if (event.type === "mouseleave") {
-		// При переведенні
-		console.log(event.pageY);
-	}
-	if (event.type === "mousemove") {
-		ball.style.cssText = `
-			left: ${event.pageX}px;
-			top: ${event.pageY}px;
-		`;
-	}
-}
-*/
-
-// Scroll
-/*
-window.addEventListener("scroll", wScroll);
-
-const mouseBlock = document.querySelector('.mouse');
-
-function wScroll(e) {
-	//console.log(scrollY);
-	console.log(mouseBlock.getBoundingClientRect().top);
-}
-*/
-
-// Завантаження
-
-/*
-браузер повністю завантажив HTML, 
-було побудовано DOM-дерево, але зовнішні ресурси, 
-такі як картинки <img> і стилі, 
-можуть бути ще не завантажені.
-*/
-window.addEventListener("DOMContentLoaded ", domLoaded);
-function domLoaded(e) {
-
-}
-/*
-браузер завантажив HTML і зовнішні ресурси 
-(картини, стилі і т.д.).
-*/
-window.addEventListener("load", pageLoaded);
-function pageLoaded(e) {
-	document.documentElement.classList.add('loaded');
-}
-
+const itemThirdLeftCoord = itemThird.getBoundingClientRect().left;
+const itemThirdTopCoord = itemThird.getBoundingClientRect().top;
+console.log(`Елемент 3 розташований за координатами top: ${itemThirdTopCoord}, left: ${itemThirdLeftCoord}`);
