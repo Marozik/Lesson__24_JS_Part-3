@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,373 +8,105 @@
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
-		<title>Lesson 24</title>
+		<title>Lesson 25</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header class="header">
 			</header>
 			<main class="page">
-				<section class="home-work">
-					<div class="home-work__container">
-						<div class="home-work__item item-home home-work__item--1">
-							<h2 class="item-home__title">Function</h2>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №1</h3>
-								<div class="task__text">
-									<p>Хто попаде перший в консоль Вася чи Коля?</p>
-									<br>
-									<p>
-										function showName() {
-											<br>
-										console.log('Вася');
-										<br>
-									}
-									<br>
-									setTimeout(showName, 0);
-									<br>
-									console.log('Коля');
-									</p>
-									<br>
-									<p>Коля попаде перший в консоль, функція showName() має затримку setTimeout параметр затримки хоч і вказаний 0, але вона всерівно є</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №2</h3>
-								<div class="task__text">
-									<p>Чи вірно визвана функція?</p>
-									<br>
-									<p>
-										showMessage();
-										<br>
-										function showMessage() {
-											<br>
-											console.log('Message');
-											<br>
-										}
-									</p>
-									<br>
-									<p>Функція визвана вірно, функцію об'явлено за допомогою Function Declaration</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №3</h3>
-								<div class="task__text">
-									<p>Чи вірно визвана функція?</p>
-									<br>
-									<p>
-										showMessageTwo();
-										<br>
-										let showMessageTwo = function() {
-											<br>
-											console.log('Message two');
-											<br>
-										}
-									</p>
-									<p>Функція визвана не вірно, функція об'явлено за допомогою Function Expression. Її можна викликати лише після об'явлення</p>
-									<br>
-									<p>
-										Вірний виклик функції
-										<br>
-										showMessageTwo();
-									</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №4</h3>
-								<div class="task__text">
-									<p>Як вирішити проблему?</p>
-									<br>
-									<p>
-										"use strict"
-										<br>
-										if (2 &gt; 1) {
-											<br>
-											function showMessage() {
-												<br>
-											console.log('Message');
-											<br>
-										}}
-										<br>
-										showMessage(); // Error: showMessage is not defined
-									</p>
-									<br>
-									<p>Рішення проблеми</p>
-									<p>
-										"use strict"
-										<br>
-										let showMessage;
-										<br>
-										if (2 > 1) {
-											<br>
-											showMessage = function() {
-												<br>
-											console.log('Message');
-											<br>
-										}}
-										<br>
-										showMessage();
-									</p>
-								</div>
-							</div>
-						</div>
+				<a data-google="false" href="https://google.com" class="link"><span>Посилання</span></a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
+				<a data-google="false" href="https://google.com" class="link">Посилання</a>
 
-						<div class="home-work__item item-home home-work__item--2">
-							<h2 class="item-home__title">Array</h2>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №1</h3>
-								<div class="task__text">
-									<p>Яке число (довжину) ми отримаємо?</p>
-									<br>
-									<p>
-										let arr =['Ваня', 'Іштван','Оля',];
-										<br>
-										let newArr = arr;
-										<br>
-										newArr.push('Петро');
-										<br>
-										console.log(arr.length);
-									</p>
-									<br>
-									<p>В результаті довжина масиву arr буде 4</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №2</h3>
-								<div class="task__text">
-									<p>1) Створіть масив users з елементами 'Ваня' та 'Іштван'.
-										<br>
-										let users = ['Ваня', 'Іштван',]; 
-										<br>
-										console.log(users);
-									</p>
-									<br>
-									<p>
-										2) Добавте 'Оля' в кінець.
-										<br>
-										users.push('Оля');
-										<br>
-										console.log(users);
-									</p>
-									<br>
-									<p>
-										3) Замініть значення 'Іштван' на 'Петро'.
-										<br>
-										users[1] = 'Петро';
-										<br>
-										console.log(users);
-									</p>
-									<br>
-									<p>
-										4) Ваш код для пошуку значення має працювати для 
-										масивів з будь-якою довжиною.
-										<br>
-										Не впевнений чи вірно зрозумив завдання, вирішив декількома методами
-										<br>
-										<br>
-										console.log(users.includes('Петро'));
-										<br>
-										<br>
-										let user;
-										<br>
-										for (let i = 0; i &lt; users.length; ++i) {
-										<br>
-										user = users[i];
-										<br>
-										if (user === 'Оля') {
-										<br>
-										console.log(users[i]);
-										<br>
-										} else {
-										<br>
-										console.log('User not found');
-										<br>
-										}};
-										<br>
-										<br>
-										<br>
-										users.forEach(user => {
-										<br>
-										if (user === 'Ваня') {
-										<br>
-										console.log(user);
-										<br>
-										} else {
-										<br>
-										console.log('User not found');
-										<br>
-										}});
-									</p>
-									<br>
-									<p>
-										5) Удаліть перший елемент масиву і покажіть його.
-										<br>
-										let firstElement = users.splice(0, 1);
-										<br>
-										console.log(firstElement);
-										<br>
-										console.log(users);
-									</p>
-									<br>
-									<p>
-										6) Вставте 'Маша' і 'Паша' в початок масиву.
-										<br>
-										users.unshift('Маша', 'Паша');
-										<br>
-										console.log(users);
-									</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №3</h3>
-								<div class="task__text">
-									<p>Видаліть елемент 'Іштван' і поверніть його в змінну</p>
-									<br>
-									<p>let arr = ['Ваня', 'Іштван', 'Оля',];</p>
-									<p>let element = arr.splice(1, 1);</p>
-									<p>console.log(element);</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №4</h3>
-								<div class="task__text">
-									<p>Зробіть з рядка масив</p>
-									<br>
-									<p>let str = 'Ваня,Іштван,Оля';</p>
-									<p>let array = str.split(',');</p>
-									<p>console.log(array);</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №5</h3>
-								<div class="task__text">
-									<p>Чому рівен previousValue в початку методу?</p>
-									<br>
-									<p>
-										let arr = [9, 2, 8,];
-										<br>
-										let reduceValue = arrTwo.reduce(function (previousValue, item, index, array) {
-										<br>
-										console.log(previousValue);
-										<br>
-										}); 
-										<br>
-										Консоль видасть помилку, змінна arrTwo не об'явлена
-									</p>
-									<br>
-									<p>
-										let arr = [9, 2, 8,];
-										<br>
-										let reduceValue = arr.reduce(function (previousValue, item, index, array) {
-										<br>
-										console.log(previousValue);
-										<br>
-										}); 
-										<br>
-										Вірний запис, previousValue буде рівен 9, так як другий аргумент не вказаний
-									</p>
-								</div>
-							</div>
-						</div>
+				<div class="mouse">
+					<div class="mouse__ball"></div>
+				</div>
 
-						<div class="home-work__item item-home home-work__item--3">
-							<h2 class="item-home__title">DOM</h2>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №1</h3>
-								<div class="task__text">
-									<div>
-										<p>Отримати в змінну елемент з атрибутом data-say-hi та отримати значення цього атрибуту </p>
-										<div data-say-hi="yes">Привіт!</div>
-									</div>
-									<br>
-									<p>let sayHi = document.querySelector('[data-say-hi]');</p>
-									<p>console.log(sayHi.dataset.sayHi);</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №2</h3>
-								<div class="task__text">
-									<div>
-										<p>Отримати в змінну елемент з текстом Йончі</p>
-										<ul>
-											<li>Корчі</li>
-											<li>Йончі</li>
-										</ul>
-									</div>
-									<br>
-									<div>
-										<p>let list = document.querySelector('ul');</p>
-										<p>let listItem = list.lastElementChild;</p>
-										<p>console.log(list);</p>
-										<p>console.log(listItem);</p>
-										<p>console.log(listItem.textContent);</p>
-									</div>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №3</h3>
-								<div class="task__text">
-									<div>
-										Добавити в змінну колекцію елементів з класом like
-										<br>
-										<br>
-										<div class="like"></div>
-										<div class="subscribe"></div>
-										<div class="like subscribe"></div>
-									</div>
-									<p>let likeItems = document.querySelectorAll('.like');
-										<br>
-										console.log(likeItems);</p>
-								</div>
-							</div>
-							<div class="item-home__task task">
-								<h3 class="task__title">Задача №4</h3>
-								<div class="task__text">
-									<div>
-										<p>Куди добавиться &lt;li&gt;Текст&lt;/li&gt; ?</p>
-										<br>
-										<ol>
-											<li>Пункт №1</li>
-											<li>Пункт №2</li>
-										</ol>
-										<br>
-										<p>const list = document.querySelectorAll('ol');</p>
-										<p>list.insertAdjacentHTML(</p>
-										<p>'beforeend',</p>
-										'&lt;li&gt;Текст&lt;/li&gt;'
-										<p>);</p>
-										<p>Буде помилка в консолі, метод document.querySelectorAll не спрацює</p>
-										<p>для вирішення задачі потрібно використовувати метод document.querySelector</p>
-									</div>
-									<br>
-									<p>const list = document.querySelector('ol');
-										<br>
-										list.insertAdjacentHTML(
-										<br>
-										'beforeend',
-										<br>
-										'&lt;li&gt;Текст&lt;/li&gt;'
-										<br>
-										);
-										<br>
-										&lt;li&gt;Текст&lt;/li&gt; добавиться останнім елементом в list</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="home-work__item item-home">
-							<h2 class="item-home__title">Scroll, size, coordinates</h2>
-							<div class="item-home__task task">
-								<h3 class="task__title">Все у файлі JS</h3>
-								</div>
-						</div>
-					</div>
-				</section>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<!-- 
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<div onclick="scrollToBlock()" data-animation-speed="1000" class="block">
+					<h1 class="block__title">Title</h1>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse eligendi, et modi blanditiis doloribus consequuntur iure corporis eaque dolores incidunt quasi dolor necessitatibus inventore veniam, id fuga. Corrupti, earum?</p>
+				 -->
 			</main>
 			<footer class="footer">
 			</footer>
 		</div>
-		<div class="block"></div>
 		<script src="js/script.js"></script>
 	</body>
 </html>
